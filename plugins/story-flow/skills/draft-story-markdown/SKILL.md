@@ -16,6 +16,8 @@ This skill helps developers create technical story markdown by:
 
 ## Instructions
 
+**Diagrams flag:** when the command says `--diagrams` was passed, also read `diagrams.md` from this skill's directory (next to this file) and follow it in Phase 3 and Phase 4. Without the flag, draft no diagrams.
+
 ### Phase 1: Gather Requirements
 
 #### Option A: Ticket ID provided
@@ -109,6 +111,8 @@ Create a story markdown with the following structure:
 - [Requirement 2 from acceptance criteria or feature description]
 - [Additional requirements derived from Figma design]
 
+[## Diagrams section here only with --diagrams, see diagrams.md]
+
 ## Tasks
 
 - Use qa-tester subagent to plan BDD scenarios @path/to/feature.feature.
@@ -181,7 +185,7 @@ If a requirement cannot be mapped to specific files:
 
 ### Phase 4: Present to Developer
 
-1. **Show the complete draft markdown** in a code block.
+1. **Show the complete draft markdown** in a code block. With `--diagrams`, also render each Mermaid diagram outside the code block so the developer can see it drawn (in a fenced `mermaid` block, which most clients render), and list any diagram node that matches no task or requirement under the review points.
 
 2. **Highlight areas needing review:**
    - Tasks where file paths were uncertain (marked with assumptions)

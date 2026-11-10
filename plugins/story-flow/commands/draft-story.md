@@ -1,7 +1,9 @@
 ---
-argument-hint: [@path/to/story.md, ticket ID e.g. PROJ-123, 4821 or feature description (optional)]
+argument-hint: [@path/to/story.md, ticket ID e.g. PROJ-123, 4821 or feature description (optional)] [--diagrams]
 description: Generate a draft story markdown from a story tracker or a feature description
 ---
+
+If `--diagrams` appears anywhere in the arguments, remove it before reading $1 and $2 below, and tell the skill diagrams were requested.
 
 Load skills in this order using the Skill tool:
 1. First: `story-flow:draft-story-markdown` (plugin - general protocol)
